@@ -1,8 +1,10 @@
 <div align="center">
 
-# Vethamithran
+# Vetha Mithran Sivaraman
 
-### Cybersecurity Student & Learner
+<a href="https://github.com/12vethamithran">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=1500&color=E11D48&center=true&vCenter=true&width=500&height=40&lines=Cybersecurity+Student+%26+Learner" alt="Cybersecurity Student & Learner"/>
+</a>
 
 **Certified in CompTIA Security+ · CompTIA PenTest+**
 
