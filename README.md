@@ -47,8 +47,11 @@ Cybersecurity student with **hands-on experience across core security domains** 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=12vethamithran&show_icons=true&hide_border=true&theme=dark&title_color=e11d48&icon_color=e11d48" height="160"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=12vethamithran&layout=compact&hide_border=true&theme=dark&title_color=e11d48" height="160"/>
+[![Profile](https://img.shields.io/badge/Profile-12vethamithran-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/12vethamithran)
+[![Followers](https://img.shields.io/github/followers/12vethamithran?style=flat-square&logo=github&label=Followers&color=e11d48&labelColor=181717)](https://github.com/12vethamithran?tab=followers)
+[![Stars](https://img.shields.io/github/stars/12vethamithran?style=flat-square&logo=github&label=Stars&color=e11d48&labelColor=181717)](https://github.com/12vethamithran?tab=repositories)
+
+Explore my work → **[github.com/12vethamithran?tab=repositories](https://github.com/12vethamithran?tab=repositories)**
 
 </div>
 
