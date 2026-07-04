@@ -9,7 +9,8 @@ Building AI-assisted security tools for SOC workflows, attack reasoning, cloud d
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vethamithran/)
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:vethamithran@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/12vethamithran)
-[![Portfolio](https://img.shields.io/badge/Featured-ARGUS-e11d48?style=flat-square&logo=vercel&logoColor=white)](https://argus-adversarial-reasoning-graph-u.vercel.app)
+[![ARGUS](https://img.shields.io/badge/Featured-ARGUS-e11d48?style=flat-square&logo=vercel&logoColor=white)](https://argus-adversarial-reasoning-graph-u.vercel.app)
+[![NOCTRA](https://img.shields.io/badge/Featured-NOCTRA_AI-181717?style=flat-square&logo=github&logoColor=white)](https://noctra-ai-autonomous-soc-platform.vercel.app)
 
 </div>
 
@@ -26,7 +27,13 @@ I am a cybersecurity student based in India, focused on the intersection of offe
 
 ---
 
-## Featured Project: ARGUS
+## Featured Projects
+
+<div align="center">
+
+![Security workflow graph](./assets/security-flow.svg)
+
+</div>
 
 ### [ARGUS - Adversarial Reasoning & Graph-based Unified Security Framework](https://github.com/12vethamithran/ARGUS-Adversarial-Reasoning-Graph-Unified-Security)
 
@@ -41,6 +48,20 @@ ARGUS is my featured security research and tooling project: a graph-based framew
 - Helps visualize relationships between signals, attack steps, and defensive decisions
 - Explores how AI and graph logic can support analyst workflows
 - Built as a practical bridge between security research and usable tooling
+
+### [NOCTRA AI - Autonomous SOC Platform](https://github.com/12vethamithran/NOCTRA-AI-Autonomous-SOC-Platform)
+
+NOCTRA AI is a browser-based SOC platform that turns raw logs into ranked alerts, attack chains, AI-assisted verdicts, and report-ready investigations.
+
+[![NOCTRA Repo](https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/12vethamithran/NOCTRA-AI-Autonomous-SOC-Platform)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-e11d48?style=for-the-badge&logo=vercel&logoColor=white)](https://noctra-ai-autonomous-soc-platform.vercel.app)
+
+**Why it matters**
+
+- Ingests CSV, JSON, syslog, EVTX, and cloud-style security logs
+- Runs deterministic detections, behavioral analysis, and AI-assisted scoring
+- Correlates alerts into incident chains for faster SOC triage
+- Generates investigation-ready outputs while keeping sessions ephemeral
 
 ---
 
