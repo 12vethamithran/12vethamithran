@@ -1,87 +1,97 @@
-<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated security workflow graph from logs to ARGUS reasoning and NOCTRA SOC">
+<svg width="920" height="250" viewBox="0 0 920 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simple animated security workflow: logs flow into ARGUS reasoning, signals, NOCTRA SOC, and final verdict">
   <style>
     .bg { fill: #0d1117; }
-    .grid { stroke: #30363d; stroke-width: 1; opacity: .32; }
-    .card { fill: #111820; stroke: #30363d; stroke-width: 1.2; rx: 14; }
-    .title { fill: #f0f6fc; font: 700 15px Inter,Segoe UI,Arial,sans-serif; letter-spacing: .08em; }
-    .label { fill: #8b949e; font: 600 11px Inter,Segoe UI,Arial,sans-serif; letter-spacing: .12em; }
-    .small { fill: #8b949e; font: 500 12px Inter,Segoe UI,Arial,sans-serif; }
-    .accent { fill: #f43f5e; }
-    .line { stroke: #f43f5e; stroke-width: 2.2; stroke-linecap: round; opacity: .65; }
-    .line-soft { stroke: #3b82f6; stroke-width: 1.8; stroke-linecap: round; opacity: .42; }
-    .node { fill: #0d1117; stroke: #f43f5e; stroke-width: 2; }
-    .pulse {
-      fill: #f43f5e;
-      filter: drop-shadow(0 0 8px rgba(244,63,94,.75));
-      animation: travel 4.8s ease-in-out infinite;
+    .panel { fill: #111820; stroke: #30363d; stroke-width: 1.2; }
+    .panel-hot { stroke: #f43f5e; }
+    .label { fill: #8b949e; font: 700 10px Inter,Segoe UI,Arial,sans-serif; letter-spacing: .16em; }
+    .title { fill: #f0f6fc; font: 800 16px Inter,Segoe UI,Arial,sans-serif; letter-spacing: .04em; }
+    .sub { fill: #8b949e; font: 500 12px Inter,Segoe UI,Arial,sans-serif; }
+    .rail { stroke: #30363d; stroke-width: 3; stroke-linecap: round; }
+    .rail-active { stroke: #f43f5e; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 18 18; opacity: .68; animation: dash 1.8s linear infinite; }
+    .node { fill: #0d1117; stroke: #30363d; stroke-width: 2; }
+    .node-hot { stroke: #f43f5e; }
+    .packet { fill: #f43f5e; filter: drop-shadow(0 0 7px rgba(244,63,94,.65)); animation: packet 5.2s ease-in-out infinite; }
+    .packet.two { animation-delay: 1.7s; opacity: .82; }
+    .packet.three { animation-delay: 3.4s; opacity: .68; }
+    .scan { fill: #f43f5e; opacity: .07; animation: scan 4.5s ease-in-out infinite; }
+    .blink { animation: blink 2.4s ease-in-out infinite; }
+    @keyframes dash {
+      to { stroke-dashoffset: -36; }
     }
-    .pulse.two { animation-delay: 1.55s; }
-    .pulse.three { animation-delay: 3.1s; }
-    .scan { animation: scan 3.8s ease-in-out infinite; }
-    .fade { animation: fade 2.4s ease-in-out infinite; }
-    @keyframes travel {
-      0%, 8% { transform: translate(95px, 130px); opacity: 0; }
-      18% { opacity: 1; }
-      34% { transform: translate(300px, 78px); opacity: 1; }
-      52% { transform: translate(456px, 132px); opacity: 1; }
-      72% { transform: translate(620px, 78px); opacity: 1; }
-      92%, 100% { transform: translate(785px, 130px); opacity: 0; }
+    @keyframes packet {
+      0%, 8% { transform: translate(96px, 124px); opacity: 0; }
+      16% { opacity: 1; }
+      32% { transform: translate(286px, 124px); }
+      50% { transform: translate(460px, 124px); }
+      68% { transform: translate(634px, 124px); }
+      86% { transform: translate(800px, 124px); opacity: 1; }
+      96%, 100% { transform: translate(800px, 124px); opacity: 0; }
     }
     @keyframes scan {
-      0%, 100% { opacity: .18; transform: translateY(-18px); }
-      50% { opacity: .45; transform: translateY(18px); }
+      0%, 100% { transform: translateX(-18px); opacity: .04; }
+      50% { transform: translateX(18px); opacity: .12; }
     }
-    @keyframes fade {
-      0%, 100% { opacity: .48; }
+    @keyframes blink {
+      0%, 100% { opacity: .58; }
       50% { opacity: 1; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .pulse, .scan, .fade { animation: none; }
+      .rail-active, .packet, .scan, .blink { animation: none; }
     }
   </style>
 
-  <rect class="bg" width="900" height="260" rx="18"/>
-  <path class="grid" d="M0 52H900M0 104H900M0 156H900M0 208H900M90 0V260M180 0V260M270 0V260M360 0V260M450 0V260M540 0V260M630 0V260M720 0V260M810 0V260"/>
+  <rect class="bg" width="920" height="250" rx="18"/>
+  <rect x="24" y="22" width="872" height="206" rx="16" fill="#0f1620" stroke="#30363d" opacity=".75"/>
+  <rect class="scan" x="48" y="62" width="824" height="124" rx="18"/>
 
-  <rect class="card" x="36" y="68" width="150" height="124" rx="14"/>
-  <text class="label" x="60" y="103">RAW LOGS</text>
-  <text class="title" x="60" y="132">Events</text>
-  <text class="small" x="60" y="158">auth, cloud, syslog</text>
+  <path class="rail" d="M110 124H810"/>
+  <path class="rail-active" d="M110 124H810"/>
 
-  <rect class="card" x="244" y="36" width="150" height="124" rx="14"/>
-  <text class="label" x="268" y="71">ARGUS</text>
-  <text class="title" x="268" y="100">Reasoning</text>
-  <text class="small" x="268" y="126">attack-path graph</text>
+  <g transform="translate(48 72)">
+    <rect class="panel" width="126" height="104" rx="14"/>
+    <text class="label" x="22" y="32">INPUT</text>
+    <text class="title" x="22" y="58">Logs</text>
+    <text class="sub" x="22" y="82">raw events</text>
+  </g>
 
-  <rect class="card" x="374" y="104" width="150" height="124" rx="14"/>
-  <text class="label" x="398" y="139">SIGNALS</text>
-  <text class="title" x="398" y="168">Context</text>
-  <text class="small" x="398" y="194">rules + evidence</text>
+  <g transform="translate(222 72)">
+    <rect class="panel panel-hot" width="126" height="104" rx="14"/>
+    <text class="label" x="22" y="32">ARGUS</text>
+    <text class="title" x="22" y="58">Reason</text>
+    <text class="sub" x="22" y="82">attack graph</text>
+  </g>
 
-  <rect class="card" x="572" y="36" width="150" height="124" rx="14"/>
-  <text class="label" x="596" y="71">NOCTRA</text>
-  <text class="title" x="596" y="100">SOC Engine</text>
-  <text class="small" x="596" y="126">triage + reports</text>
+  <g transform="translate(396 72)">
+    <rect class="panel" width="126" height="104" rx="14"/>
+    <text class="label" x="22" y="32">SIGNALS</text>
+    <text class="title" x="22" y="58">Context</text>
+    <text class="sub" x="22" y="82">rules + AI</text>
+  </g>
 
-  <rect class="card" x="736" y="68" width="128" height="124" rx="14"/>
-  <text class="label" x="760" y="103">OUTPUT</text>
-  <text class="title" x="760" y="132">Verdict</text>
-  <text class="small" x="760" y="158">mapped incident</text>
+  <g transform="translate(570 72)">
+    <rect class="panel panel-hot" width="126" height="104" rx="14"/>
+    <text class="label" x="22" y="32">NOCTRA</text>
+    <text class="title" x="22" y="58">Triage</text>
+    <text class="sub" x="22" y="82">SOC workflow</text>
+  </g>
 
-  <path class="line-soft" d="M186 130 C220 130 224 82 244 82"/>
-  <path class="line" d="M186 130 C245 130 290 80 394 98"/>
-  <path class="line-soft" d="M394 98 C430 102 430 138 374 152"/>
-  <path class="line" d="M524 166 C558 166 548 90 572 90"/>
-  <path class="line" d="M722 98 C742 98 726 130 736 130"/>
+  <g transform="translate(744 72)">
+    <rect class="panel" width="126" height="104" rx="14"/>
+    <text class="label" x="22" y="32">OUTPUT</text>
+    <text class="title" x="22" y="58">Verdict</text>
+    <text class="sub" x="22" y="82">incident path</text>
+  </g>
 
-  <circle class="node fade" cx="96" cy="130" r="8"/>
-  <circle class="node fade" cx="319" cy="98" r="8"/>
-  <circle class="node fade" cx="449" cy="166" r="8"/>
-  <circle class="node fade" cx="647" cy="98" r="8"/>
-  <circle class="node fade" cx="800" cy="130" r="8"/>
+  <circle class="node" cx="110" cy="124" r="8"/>
+  <circle class="node node-hot blink" cx="286" cy="124" r="8"/>
+  <circle class="node" cx="460" cy="124" r="8"/>
+  <circle class="node node-hot blink" cx="634" cy="124" r="8"/>
+  <circle class="node" cx="810" cy="124" r="8"/>
 
-  <rect class="scan" x="54" y="116" width="114" height="28" rx="7" fill="#f43f5e" opacity=".18"/>
-  <circle class="pulse" r="5"/>
-  <circle class="pulse two" r="5"/>
-  <circle class="pulse three" r="5"/>
+  <circle class="packet" r="5"/>
+  <circle class="packet two" r="5"/>
+  <circle class="packet three" r="5"/>
+
+  <text class="label" x="48" y="209">LIVE SECURITY WORKFLOW</text>
+  <text class="sub" x="662" y="210">logs -> reasoning -> detections -> triage -> verdict</text>
 </svg>
